@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 HOST_OS = RbConfig::CONFIG['host_os']
 
 gem 'rails', '3.2.8'
