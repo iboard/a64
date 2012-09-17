@@ -23,6 +23,9 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
 namespace :deploy do
+
+  after  "deploy:update_code", "deploy:assets:precompile"
+
   namespace :assets do
     task :precompile do
       if File::exist?(File.expand_path('../precompile_assets.txt',__FILE__))
@@ -46,5 +49,6 @@ namespace :deploy do
     before "deploy:assets:precompile", "bundle:install"
   end
 end
+
 after "deploy", "deploy:cleanup" # keep 5 versions only
 
