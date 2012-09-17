@@ -41,7 +41,7 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/mongoid.yml #{release_path}/config/mongoid.yml"
     run "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
     run "ln -nfs #{shared_path}/config/settings.yml #{release_path}/config/settings.yml"
-    run "ln -nfs #{shared_path}/config/settings/production.yml #{release_path}/config/settings/production.yml"
+    run "ln -nfs #{shared_path}/config/settings #{release_path}/config/settings"
   end
   after "deploy:finalize_update", "deploy:symlink_config"
 

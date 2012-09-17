@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+HOST_OS = RbConfig::CONFIG['host_os']
 
 gem 'rails', '3.2.8'
 
@@ -22,3 +23,15 @@ group :development do
 end
 
 gem "haml-rails"
+
+
+case HOST_OS
+
+  when /darwin/i
+    #gem 'rb-fsevent', :group => :development
+
+  when /linux/i
+    #gem 'rb-fsevent', :group => :development
+    gem 'therubyracer', '~> 0.10.2', :group => :assets
+
+end

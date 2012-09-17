@@ -5,7 +5,7 @@ namespace :webrick do
       case command
       when 'start'
         for port in cluster_ports
-          pidpath = "#{current_path}/tmp/pids/#{port}.pid"
+          pidpath = "tmp/pids/#{port}.pid"
           puts "Starting WEBrick at port #{port} on #{bind_ip} as deamon"
           run "cd #{current_path}; rails server -d -p #{port} -b #{bind_ip} --environment=production --pid=#{pidpath}"
         end
