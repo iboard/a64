@@ -25,12 +25,7 @@ namespace :deploy do
   desc "Setup the config-files on the server with example-defaults"
   task :setup_config, roles: :app do
     run "mkdir -p #{shared_path}/config"
-    put File.read("config/mongoid.example.yml"), "#{shared_path}/config/mongoid.yml"
-    put File.read("config/test_secrets.yml"), "#{shared_path}/config/secrets.yml"
-    put File.read("config/settings_sample.yml"), "#{shared_path}/config/settings.yml"
-
     run "mkdir -p #{shared_path}/config/settings"
-    put File.read("config/settings/production.yml_sample"), "#{shared_path}/config/settings/production.yml"
   end
   after "deploy:setup", "deploy:setup_config"
 
