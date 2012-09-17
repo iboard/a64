@@ -1,0 +1,11 @@
+.row-fluid
+  .span2
+    &nbsp;
+  .span8
+    .navbar
+      .navbar-inner
+        = link_to icon(:home), root_path, class: 'brand'
+        %ul.nav
+          %li.active=link_to "...", root_path
+  .span2
+    &nbsp;
