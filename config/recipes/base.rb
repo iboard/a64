@@ -26,6 +26,7 @@ namespace :deploy do
   task :setup_config, roles: :app do
     run "mkdir -p #{shared_path}/config"
     run "mkdir -p #{shared_path}/config/settings"
+    run "mkdir -p #{shared_path}/../releases"
   end
   after "deploy:setup", "deploy:setup_config"
 
