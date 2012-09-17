@@ -26,13 +26,4 @@ end
 gem "haml-rails"
 
 
-case HOST_OS
-
-  when /darwin/i
-    #gem 'rb-fsevent', :group => :development
-
-  when /linux/i
-    #gem 'rb-fsevent', :group => :development
-    gem 'therubyracer', '~> 0.10.2', :group => :assets
-
-end
+gem 'therubyracer', '~> 0.10.2', :group => :assets
