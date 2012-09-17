@@ -27,6 +27,8 @@ namespace :deploy do
     run "mkdir -p #{shared_path}/config"
     run "mkdir -p #{shared_path}/config/settings"
     run "mkdir -p #{shared_path}/../releases"
+    run "mkdir -p #{shared_path}/tmp/pids"
+
   end
   after "deploy:setup", "deploy:setup_config"
 
