@@ -19,14 +19,6 @@ load "config/recipes/webrick"
 load "config/recipes/paperclip"
 load "config/recipes/application_config"
 
-# NOT YET AVAILABLE BUT COMMING SOON
-#load "config/recipes/unicorn"  
-# LOAD RECIPES FOR APACHE AND PHUSION PASSENGER
-# disable proxy-balancer-section above when enabling this lines 
-# load "config/recipes/virtual_host_passenger"
-# load "config/recipes/passenger"
-
-
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
