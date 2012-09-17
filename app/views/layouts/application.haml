@@ -26,19 +26,14 @@
     .container-fluid
       .row-fluid
         .menu-left.span2
-          %h1
-            &nbsp;
           = render "shared/left_menu.haml"
         .span6
           = yield
         .sidebar.span2
-          %h1
-            &nbsp;
           = render "shared/sidebar.haml"
         .span2
           &nbsp;
       .vertical-gap
-      .row-fluid
-        .offset2= link_to( "<i class='icon-circle-arrow-up'></i>".html_safe, "#" )
+
     %footer.navbar-fixed-bottom
-      &copy; 2012 by Andreas Altendorfer
+      &copy; 2012 by <a href='http://altendorfer.at'>Andreas Altendorfer</a>

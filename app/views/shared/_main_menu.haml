@@ -4,8 +4,9 @@
   .span8
     .navbar
       .navbar-inner
-        = link_to icon(:home), root_path, class: 'brand'
+        .brand.stamped.bold
+          = link_to  "A64", root_path
         %ul.nav
-          %li.active=link_to "...", root_path
+          %li.active= link_to icon(:home), root_path
   .span2
     &nbsp;
