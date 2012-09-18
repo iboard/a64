@@ -23,7 +23,9 @@ group :development do
   gem "capistrano"
 end
 
+# APPLICATION
 gem "haml-rails"
+gem "mongoid", "~> 3.0.0"
 
 
 gem 'therubyracer', '~> 0.10.2', :group => :assets

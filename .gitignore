@@ -16,6 +16,9 @@
 /log/*.log
 /tmp
 
+# Ignore local configs
+config/mongoid.yml
+
 # various artifacts
 **.war
 *.rbc
