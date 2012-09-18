@@ -6,7 +6,7 @@
   <Proxy balancer://webrick>
     Order allow,deny
     Allow from all
-    <% for port in cluster_ports %>
+    <% cluster_ports.each do |port| %>
       <%= "BalancerMember http://#{bind_ip}:#{port}" %> 
     <% end %>
   </Proxy>

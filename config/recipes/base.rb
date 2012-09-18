@@ -55,7 +55,9 @@ namespace :deploy do
 
   [:start, :stop, :restart].each do |t|
     desc "#{t} task is a no-op with proxy_balancer"
-    task t, :roles => :app do ; end
+    task t, :roles => :app do
+      #noop
+    end
   end
   
 end

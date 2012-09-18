@@ -4,13 +4,13 @@ namespace :webrick do
     task command, roles: :web do
       case command
       when 'start'
-        for port in cluster_ports
+        cluster_ports.each { |port|
           pidpath = "#{shared_path}/pids/#{port}.pid"
           puts "Starting WEBrick at port #{port} on #{bind_ip} as deamon"
           run "cd #{current_path}; rails server -d -p #{port} -b #{bind_ip} --environment=production --pid=#{pidpath}"
-        end
+        }
       when 'stop'
-        for port in cluster_ports
+        cluster_ports.each { |port|
           begin
             pidpath = "#{shared_path}/pids/#{port}.pid"
             run "kill -9 `cat #{pidpath}`"
@@ -18,10 +18,12 @@ namespace :webrick do
             # try to kill with ps
             puts "COULDN'T KILL THROUGH PIDFILE #{e.inspect}"
           end
-        end
+        }
       when 'restart'
         stop
         start
+      else
+        puts "UNKNOWN command: '#{command}'"
       end
     end
   end

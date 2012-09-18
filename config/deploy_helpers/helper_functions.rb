@@ -17,6 +17,7 @@ def determine_target(&block)
     puts "Please provide a target-server through TARGET=....."
     exit 1
   else
+    raise RuntimeError.new( message: "_target can't be nil in #{__FILE__}:#{__LINE__}")
     block_given? ? yield(_target+".rb") : _target+".rb"
   end
 end
