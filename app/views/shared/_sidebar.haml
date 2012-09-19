@@ -3,5 +3,5 @@
     %strong Project
     %br/
   %ul.nav
-    %li.expand-width= link_to "Fork from Github", "http://github.com/iboard/a64", class: "btn btn-primary"
-    %li.expand-width= link_to "Issues", "http://github.com/iboard/a64/issues", class: "btn"
+    - project_links.each do |label, button, link|
+      %li.gap-bottom=button_to(classes: button + " expand-width") { link_to label, link }

@@ -12,6 +12,9 @@ def template(from, to=nil,template_path=nil)
   end
 end
 
+def put_file(from, to)
+  put File.open(from,'rb').read, to
+end
 
 namespace :deploy do
 

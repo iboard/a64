@@ -13,6 +13,16 @@ module BootstrapHelper
     "<i class='#{bootstrap_icon(icon)}'></i>".html_safe
   end
 
+  # Draw link as a bootstrap button
+  def button_to(options={}, &block)
+    if options[:classes].present?
+      options[:classes] += " btn-primary-link" if options[:classes] =~ /(btn-primary)|(btn-danger)/
+    end
+    content_tag :button, class: "btn #{options[:classes]}" do
+      yield
+    end
+  end
+
 
   private
 

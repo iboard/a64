@@ -1,12 +1,16 @@
 .hero-unit
-  %h1 Comming soon ...
-  %h3 A clean Rails, MongoID, OmniAuth application.
-  %br/
-  %p.loud
-    This is a very new project, started September 17, 2012
-    %br/
-    By now this is a side-project to my daily work. Once this project will develop any relevance, I will
-    post an introduction here. Stay tuned.
+  %h1 clean and 100% test-covered
+  %h3 The aim of this project is to give you an example of a clean and tested Rails-application.
+
   %p
-    %strong
-      No support, No Warranty, No Plan.
+    Use it as is, to learn, as a template, for whatever you want.
+    %br/
+    %strong It's `free source´.
+    Sure, without any warranty, and without support expect through
+    = link_to "Github-issues", "https://github.com/iboard/a64/issues"
+
+  %hr/
+
+  %ul.nav.nav-pills
+    - project_links.each do |label, button, link|
+      %li.gap-right=button_to(classes: button) { link_to label, link }

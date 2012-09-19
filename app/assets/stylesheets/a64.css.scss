@@ -35,3 +35,21 @@ footer {
     font-size: 1.5em;
   }
 }
+
+.btn-primary-link {
+  a {
+    color: $darkBtnLinkColor;
+    &:hover {
+      color: $darkBtnLinkColor;
+      text-decoration: underline;
+    }
+  }
+}
+
+.gap-right {
+  margin-right: 10px;
+}
+
+.gap-bottom {
+  margin-bottom: 5px;
+}

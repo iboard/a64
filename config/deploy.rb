@@ -18,6 +18,7 @@ load "config/recipes/virtual_host_proxy_balancer"
 load "config/recipes/webrick"
 load "config/recipes/paperclip"
 load "config/recipes/application_config"
+load "config/recipes/documentation"
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
