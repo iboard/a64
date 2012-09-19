@@ -24,11 +24,13 @@ end
 
 group :development do
   gem "capistrano"
+  gem "yard"
 end
 
 # APPLICATION
 gem "haml-rails"
 gem "mongoid", "~> 3.0.0"
 
-
+# TOOLS AND HELPERS
+gem "redcarpet"
 gem 'therubyracer', '~> 0.10.2', :group => :assets

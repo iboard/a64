@@ -65,3 +65,7 @@ README.html
 
 # SimpleCov
 coverage
+
+# Doc
+.yardoc
+doc
