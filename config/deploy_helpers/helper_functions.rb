@@ -4,20 +4,16 @@ def load_target_server
   end
 end
 
-
-
-
-
 def determine_target(&block)
   _target = ENV['TARGET'] if ENV['TARGET']
   _target ||= server_configurations.first if server_configurations.count==1
   if !ENV['TARGET'] && server_configurations.count > 0
-    puts "!!!CAN'T CONTINUE!!!"
+    puts "\n!!!CAN'T CONTINUE!!!\n"
     puts "There are more than one server configurations in config/servers/: " + server_configurations.join(', ').gsub(/\.rb/,'')
     puts "Please provide a target-server through TARGET=....."
     exit 1
   else
-    raise RuntimeError.new( message: "_target can't be nil in #{__FILE__}:#{__LINE__}")
+    raise RuntimeError.new( message: "_target can't be nil in #{__FILE__}:#{__LINE__}") if _target.nil?
     block_given? ? yield(_target+".rb") : _target+".rb"
   end
 end
