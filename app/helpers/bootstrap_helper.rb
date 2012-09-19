@@ -24,6 +24,10 @@ module BootstrapHelper
   end
 
 
+  def caret
+    "<b class='caret'></b>".html_safe
+  end
+
   private
 
   # @param [Symbol] icon - see [icon()]
