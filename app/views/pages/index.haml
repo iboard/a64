@@ -13,4 +13,4 @@
 
   %ul.nav.nav-pills
     - project_links.each do |label, button, link|
-      %li.gap-right=button_to(classes: button) { link_to label, link }
+      %li.gap-right.gap-bottom=button_to(classes: button) { link_to label, link }
