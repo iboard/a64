@@ -17,7 +17,7 @@ namespace :deploy do
   desc "Deploy coverage-output to server"
   task :deploy_coverage, :roles => :web do
     `tar cvzf tmp/coverage.tgz coverage/`
-    put_file "tmp/doc.tgz", "/tmp/doc.tgz"
+    put_file "tmp/coverage.tgz", "/tmp/coverage.tgz"
     run "tar xvzf /tmp/coverage.tgz -C #{release_path}/public/"
   end
   after "deploy", "deploy:deploy_coverage"
