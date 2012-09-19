@@ -11,7 +11,8 @@ module ApplicationHelper
     [
         ['Github', 'btn-primary', 'https://github.com/iboard/a64'],
         ['README', '', 'https://github.com/iboard/a64#readme'],
-        ['Issues', 'btn-danger', 'https://github.com/iboard/a64/issues']
+        ['Issues', 'btn-danger', 'https://github.com/iboard/a64/issues'],
+        ['RDoc', '', '/doc/index.html']
     ]
   end
 
