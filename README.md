@@ -5,6 +5,7 @@ A clean and 100% test-covered Rails-application you may fork and use as a starte
 
   * [At Github](http://github.com/iboard/a64)
   * [Live demo](http://a64.iboard.cc)
+  * [Coverage](http://a64.iboard.cc/coverage/index.html)
 
 
 Fork project
@@ -31,6 +32,8 @@ Test
     open coverage/index.html
 
 _open command_ [(1)](#fn1)
+
+See [current coverage-document](http://a64.iboard.cc/coverage/index.html)
 
 Deploy to your server
 =====================
