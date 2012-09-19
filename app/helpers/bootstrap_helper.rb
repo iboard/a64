@@ -7,8 +7,9 @@
 # provides some methods to map bootstrap-specific logics.
 module BootstrapHelper
 
-  # @param [Symbol] icon - eg: :home, :back, :next, :quit, .... will be mapped with [bootstrap_icon]
-  # @return [String] - HTML-string to 'draw' an icon
+  # @param [String|Symbol] icon
+  # @see #bootstrap_icon
+  # @return [String] HTML-string to 'draw' an icon
   def icon(icon)
     "<i class='#{bootstrap_icon(icon)}'></i>".html_safe
   end
@@ -16,11 +17,11 @@ module BootstrapHelper
   # = button_to
   # Adds class 'btn-primary-link' to define "white" text-color in links if btn is dark (red/danger, blue/primary)
   #
-  # HAML-example:
-  #
-  #     = button_to classes: "btn-primary" { link_to "Somewhare", "http://....." }
+  # @example HAML-usage
+  #   = button_to classes: "btn-primary" { link_to "Somewhare", "http://....." }
   #
   # @param [Hash] options
+  # @option options [String] :classes additional bootstrap btn-classes, eg. 'btn-primary'
   # @return [String] - HTML Bootstrap button with :block inside
   def button_to(options={}, &block)
     if options[:classes].present?
@@ -37,9 +38,15 @@ module BootstrapHelper
     "<b class='caret'></b>".html_safe
   end
 
-  private
+  private # @!group private methods
 
-  # @param [Symbol] icon - see [icon()]
+  # = map symbols to bootstrap-classes
+  # @param [Symbol|String] icon
+  #
+  # Map:
+  #   :home             ... 'icon-home'
+  #   default, missing  ... 'icon-certificate'
+  #
   # @return [String] - the icon-class for twitter bootstrap
   def bootstrap_icon(icon)
     case icon.to_s
@@ -49,5 +56,6 @@ module BootstrapHelper
         'icon-certificate'
     end
   end
+  # @!endgroup
 
 end
