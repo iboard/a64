@@ -62,3 +62,6 @@ README.html
 
 /config/servers
 /config/servers/**/*
+
+# SimpleCov
+coverage

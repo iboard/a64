@@ -3,7 +3,7 @@
 # @author Andi Altendorfer <andreas@altendorfer.at>
 #
 
-module BootrapHelper
+module BootstrapHelper
 
 
   def icon(icon)

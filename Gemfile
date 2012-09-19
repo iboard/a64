@@ -17,6 +17,9 @@ group :test do
   gem "rspec-rails"
   gem "spork"
   gem "capybara"
+  gem 'test-unit'
+  gem 'simplecov'
+  gem 'database_cleaner'
 end
 
 group :development do
