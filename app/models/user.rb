@@ -4,7 +4,7 @@
 #
 
 # = class User
-# is responsible to identify a users by their :name
+# is responsible to identify users by their :name
 # User-authentication will be managed in an extra class not in model User!
 # Keep this model as small as possible and take care not to create unnecessary dependencies.
 class User
