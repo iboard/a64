@@ -1,0 +1,45 @@
+@import "constants";
+
+.vertical-gap {
+  height: 50px;
+}
+
+.expand-width {
+  width: 100%;
+  .btn {
+    &:hover {
+      background: $linkColor;
+      color: lighten( $linkColor, 80% );
+    }
+  }
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.bold  {
+  font-weight: bold;
+  a { font-weight: bold; }
+}
+
+.loud {
+  font-size: 1.5em;
+  text-shadow: 1px 1px 5px #888;
+}
+
+.gap-right {
+  margin-right: 10px;
+}
+
+.gap-bottom {
+  margin-bottom: 5px;
+}
+
+.small {
+  font-size: 0.75em;
+}

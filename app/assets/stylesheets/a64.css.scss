@@ -10,30 +10,10 @@ footer {
   margin-bottom: 0px;
 }
 
-.vertical-gap {
-  height: 50px;
-}
-
-.expand-width {
-  width: 100%;
-  .btn {
-    &:hover {
-      background: $linkColor;
-      color: lighten( $linkColor, 80% );
-    }
-  }
-}
-
-.bold  {
-  font-weight: bold;
-  a { font-weight: bold; }
-}
 
 .brand {
-  a {
-    color: #5f6b72;
-    font-size: 1em;
-  }
+   a { color: #000; }
+   border-right: 1px solid #aaa;
 }
 
 .btn-primary-link {
@@ -41,15 +21,27 @@ footer {
     color: $darkBtnLinkColor;
     &:hover {
       color: $darkBtnLinkColor;
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }
 
-.gap-right {
-  margin-right: 10px;
+.btn {
+  a {
+    &:hover { text-decoration: none; }
+  }
 }
 
-.gap-bottom {
-  margin-bottom: 5px;
+
+.dropdown {
+  font-weight: 200;
+  color: #000;
+  letter-spacing: 1.5px;
+  a.dropdown-toggle {
+    color: #000;
+  }
+  &:hover {
+    color: #444;
+    text-shadow: 1px 1px 2 #000;
+  }
 }

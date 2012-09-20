@@ -1,21 +1,16 @@
-.row-fluid
-  .span2
-    &nbsp;
-  .span8
-    .navbar
-      .navbar-inner
-        = link_to ("<span class='icon-bar'></span>"*3).html_safe, '#', class: "btn btn-navbar", :"data-toggle" => "collapse", :"data-target" => ".nav-collapse"
+.container-fluid
+  .navbar
+    .navbar-inner
+      = link_to ("<span class='icon-bar'></span>"*3).html_safe, '#', class: "btn btn-navbar", :"data-toggle" => "collapse", :"data-target" => ".nav-collapse"
 
-        .brand.stamped.bold
-          = link_to  "A64", root_path
+      .brand.stamped.bold
+        = link_to  "A64", root_path
 
-        .nav-collapse
-          %ul.nav
-            %li.active= link_to icon(:home), root_path
-            %li.dropdown
-              = link_to "Project Links #{caret}".html_safe, "#", class: "dropdown-toggle", "data-toggle" => "dropdown"
-              %ul.dropdown-menu
-                - project_links.each do |label, button, link|
-                  %li=link_to label, link
-  .span2
-    &nbsp;
+      .nav-collapse
+        %ul.nav
+          %li= link_to icon(:home), root_path
+          %li.dropdown
+            = link_to "Project Links #{caret}".html_safe, "#", class: "dropdown-toggle", "data-toggle" => "dropdown"
+            %ul.dropdown-menu
+              - project_links.each do |label, button, link|
+                %li=link_to label, link

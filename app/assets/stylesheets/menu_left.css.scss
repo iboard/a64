@@ -1,3 +1,31 @@
 .menu-left {
+  padding-left: 25px;
+}
 
+
+@media (max-width: 480px) {
+  .menu-left {
+    padding-left: 25px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .menu-left {
+    padding-left: 0px;
+  }
+}
+
+// iPad Landscape
+@media (min-width: 790px) {
+ .menu-left {
+    padding-left: 25px;
+  } 
+}
+
+
+@media (min-width: 980px) {
+  .menu-left {
+    padding-left: 25px;
+  }
 }

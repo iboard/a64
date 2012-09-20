@@ -23,17 +23,27 @@
     %header
       = render "shared/main_menu.haml"
 
-    .container-fluid
-      .row-fluid
-        .menu-left.span2
-          = render "shared/left_menu.haml"
-        .span6
-          = yield
-        .sidebar.span2
-          = render "shared/sidebar.haml"
-        .span2
-          &nbsp;
-      .vertical-gap
-
+    .row-fluid
+      .span2.menu-left
+        .note
+          %h1.loud Welcome
+          %p keep your environment clean and green!
+          %p This is a very new project. So don't expect something spectacular here.
+          .small.pull-right
+            %em 
+              %strong Andras Altendorfer,
+              %br/
+              September 20, 2012
+          .clear-right
+        = render "shared/left_menu.haml"
+      .span8
+        = yield
+      .span2.sidebar
+        = render "shared/sidebar.haml"
+    
+    .vertical-gap
+    .row-fluid
+    
     %footer.navbar-fixed-bottom
-      &copy; 2012 by <a href='http://altendorfer.at'>Andreas Altendorfer</a>
+      &copy; 2012 by
+      = link_to "Andreas Altendorfer", "http://altendorfer.at"
