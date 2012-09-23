@@ -14,3 +14,5 @@
             %ul.dropdown-menu
               - project_links.each do |label, button, link|
                 %li=link_to label, link
+        %ul.pull-right.nav
+          %li= link_to icon(:setup)+" Admin", admin_path

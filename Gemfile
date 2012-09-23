@@ -33,6 +33,9 @@ end
 gem "haml-rails"
 gem "mongoid", "~> 3.0.0"
 
+# ENGINES
+gem "admin", git: "git@github.com:iboard/a64admin.git"
+
 # TOOLS AND HELPERS
 gem "redcarpet"
 gem 'therubyracer', '~> 0.10.2', :group => :assets

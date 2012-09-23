@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:iboard/a64admin.git
+  revision: 740cdf9c6a75a7ff3d5c093812239d5d46d1223b
+  specs:
+    admin (0.0.1)
+      rails (~> 3.2.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -178,6 +185,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  admin!
   bootstrap-sass (= 2.0.4.2)
   capistrano
   capybara
