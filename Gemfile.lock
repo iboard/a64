@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/aa/Development/a64/rails/admin
+GIT
+  remote: git@github.com:iboard/a64admin.git
+  revision: 4e947417f00311a9b235663cf6cb604d03f9aaae
   specs:
     admin (0.0.1)
       rails (~> 3.2.8)
