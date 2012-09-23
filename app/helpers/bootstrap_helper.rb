@@ -52,6 +52,8 @@ module BootstrapHelper
     case icon.to_s
       when 'home'
         'icon-home'
+      when 'setup'
+        'icon-cog'
       else
         'icon-certificate'
     end
