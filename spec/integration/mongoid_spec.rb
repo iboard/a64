@@ -7,11 +7,11 @@ require "rspec"
 
 describe Mongoid do
 
-  it "should loads settings" do
+  it "should load settings" do
     Mongoid::Config::settings[:raise_not_found_error].should  be_true
   end
 
-  it "can store documents" do
+  it "should store documents" do
     class TestDocument
       include Mongoid::Document
       field :name

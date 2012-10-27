@@ -45,6 +45,7 @@ module BootstrapHelper
   #
   # Map:
   #   :home             ... 'icon-home'
+  #   :setup            ... 'icon-cog'
   #   default, missing  ... 'icon-certificate'
   #
   # @return [String] - the icon-class for twitter bootstrap

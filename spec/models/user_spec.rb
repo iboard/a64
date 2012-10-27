@@ -15,7 +15,7 @@ describe User do
     User.find("user-1").should == user
   end
 
-  it "validates unique keys" do
+  it "should validate unique keys" do
     user1 = User.create name: "User 1"
     user1.should be_valid
     user2 = User.create name: "User 1"
@@ -23,7 +23,7 @@ describe User do
     user2.errors.messages[:name].should include('is already taken')
   end
 
-  it "validates key presence" do
+  it "should validate key presence" do
     user = User.create
     user.should_not be_valid
     user.errors[:name].should include('can\'t be blank')

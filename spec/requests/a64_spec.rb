@@ -3,9 +3,9 @@ require "rspec"
 
 describe PagesController do
 
-  it "should says hello" do
+  it "should have the page title to lead to root_path" do
     visit root_path
-    page.should have_content "A64"
+    page.all("a", href: root_path, text: "A64").should_not be_nil
   end
 
 end
