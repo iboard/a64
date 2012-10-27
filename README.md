@@ -31,6 +31,11 @@ Test
     rspec --no-drb spec/spec_helper.rb spec/**/*_spec.rb
     open coverage/index.html
 
+or run it by the rake-task
+
+    rake coverage:cover
+
+
 _open command_ [(1)](#fn1)
 
 See [current coverage-document](http://a64.iboard.cc/coverage/index.html)

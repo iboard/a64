@@ -21,7 +21,7 @@
   %body
 
     %header
-      = render "shared/main_menu.haml"
+      = render "shared/main_menu"
 
     .row-fluid
       .span2.menu-left
@@ -35,11 +35,11 @@
               %br/
               September 20, 2012
           .clear-right
-        = render "shared/left_menu.haml"
+        = render "shared/left_menu"
       .span8
         = yield
       .span2.sidebar
-        = render "shared/sidebar.haml"
+        = render "shared/sidebar"
     
     .vertical-gap
     .row-fluid

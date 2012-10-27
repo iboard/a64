@@ -8,8 +8,9 @@
 # User-authentication will be managed in an extra class not in model User!
 # Keep this model as small as possible and take care not to create unnecessary dependencies.
 # @attr [String] name unique username, used "parameterized" as the document-id
-#  validates: uniqueness, presence
-# @attr [String] _id for new :key-behavior of MongoId. Use :name as key, name("Andi Altendorfer") -> :_id => 'andi-altendorfer'
+#   validates: uniqueness, presence
+# @attr [String] _id for new :key-behavior of MongoId.
+#   Use :name as key, name("Andi Altendorfer") -> :_id => 'andi-altendorfer'
 class User
   include Mongoid::Document
 
