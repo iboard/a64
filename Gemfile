@@ -30,6 +30,9 @@ group :development do
   gem "yard"
 end
 
+# RVM
+gem 'rvm-capistrano'
+
 # APPLICATION
 gem "haml-rails"
 gem "bcrypt-ruby"

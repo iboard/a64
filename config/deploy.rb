@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+require "rvm/capistrano"                               # Load RVM's capistrano plugin.
 require File.expand_path '../deploy_helpers/helper_functions.rb', __FILE__
 # SETUP SECTION =================================================
 
@@ -7,6 +8,9 @@ load_target_server
 set :scm, "git"
 set :repository, "git://github.com/iboard/#{source_repository}.git"
 set :branch, "master"
+set :rvm_ruby_string, '1.9.3-p194@r32'
+
+
 # END SETUP SECTION =============================================
 
 
