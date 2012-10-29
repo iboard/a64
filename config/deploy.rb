@@ -9,7 +9,13 @@ set :scm, "git"
 set :repository, "git://github.com/iboard/#{source_repository}.git"
 set :branch, "master"
 set :rvm_ruby_string, '1.9.3-p194@r32'
-
+set :default_environment, {
+    'PATH' => "/usr/local/rvm/gems/ruby-1.9.3-p194@r32/bin:/usr/local/rvm/gems/ruby-1.9.3-p194@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p194/bin:/usr/local/rvm/bin:$PATH",
+    'RUBY_VERSION' => 'ruby 1.9.3',
+    'GEM_HOME'     => '/usr/local/rvm/gems/ruby-1.9.3-p194@r32',
+    'GEM_PATH'     => '/usr/local/rvm/gems/ruby-1.9.3-p194@r32:/usr/local/rvm/gems/ruby-1.9.3-p194@global',
+    'BUNDLE_PATH'  => '/usr/local/rvm/gems/ruby-1.9.3-p194@r32'  # If you are using bundler.
+}
 
 # END SETUP SECTION =============================================
 
