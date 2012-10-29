@@ -3,6 +3,9 @@
 # @author Andi Altendorfer <andreas@altendorfer.at>
 #
 
+# use 'has_secured_password'
+# @example
+#  user.authentications.create({password:'secret', password_confirmation:'secret'}, PasswordAuthentication )
 class PasswordAuthentication < Authentication
   include ActiveModel::SecurePassword
   field :password_digest, :type => String

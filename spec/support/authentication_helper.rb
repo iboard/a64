@@ -16,11 +16,15 @@ def sign_in_as_admin
 end
 
 def create_authenticated_user(name, auth_options={}, auth_class=PasswordAuthentication)
-  u = User.create(name: name, is_admin: name == 'root')
-  if auth_options == {}
+  u = User.find_or_create_by(name: name)
+  if auth_options.empty?
     u.authentications.create
   else
     u.authentications.create( auth_options, auth_class)
+  end
+  if name == 'root'
+    u.is_admin = true
+    u.save!
   end
   u
 end

@@ -29,7 +29,7 @@ class User
     self.authentications.count == 0
   end
 
-  # @param String password - clear text password
+  # @param [String] password - clear text password
   # @return Authentication - first authentication of user which responds true on authenticate or nil
   def authenticate(password)
     self.authentications.detect do |_auth|

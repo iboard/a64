@@ -1,3 +1,4 @@
+# Globaly used helper-methods
 module ApplicationHelper
 
   # Project Links

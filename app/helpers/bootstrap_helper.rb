@@ -62,7 +62,15 @@ module BootstrapHelper
     end
   end
 
-
+  # = map Rails::flashes[:type] to Bootstrap-alert-classes
+  # @param [Symbol|String] flash_class
+  #
+  # Map:
+  #   :alert             ... 'alert-error'
+  #   :notice            ... 'alert-success'
+  #   default, missing   ... 'alert-info'
+  #
+  # @return [String] - the icon-class for twitter bootstrap
   def bootstrap_flash_class(flash_class)
     case flash_class.to_s
       when 'alert'
