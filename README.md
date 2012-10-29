@@ -48,6 +48,7 @@ Requirements
 
   * Debian/Ubuntu server
   * Apache with proxy and proxy-balancer
+  * ruby 1.9.3 ( Mongoid 3 doesn't work with ruby < 1.9.3! )
 
 Prepare
 -------
@@ -57,6 +58,9 @@ Prepare
 
 Deploy
 ------
+
+Edit `config/deploy.rb` and modify the SETUP-section to fit your needs
+
 
 **Initial deploy**
 
