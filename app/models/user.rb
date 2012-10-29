@@ -19,4 +19,21 @@ class User
   validates_uniqueness_of :name
 
   field :_id, type: String, default: ->{ name.parameterize('-') if name }
+  field :is_admin, type: Boolean, default: false
+  attr_protected :admin
+
+  embeds_many :authentications
+
+  # @return Boolean - true if user has no authentication
+  def anonymous?
+    self.authentications.count == 0
+  end
+
+  # @param String password - clear text password
+  # @return Authentication - first authentication of user which responds true on authenticate or nil
+  def authenticate(password)
+    self.authentications.detect do |_auth|
+      _auth.authenticate(password) if _auth.respond_to?(:authenticate) && _auth.password_digest
+    end
+  end
 end

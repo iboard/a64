@@ -1,0 +1,14 @@
+%h1.page-title=t('sign_in')
+
+.sign-in-form
+  = form_tag session_path, class: "form form-vertical" do
+    %fieldset
+      .control-group
+        .control-label= label_tag :username, t('username')
+        .controls= text_field_tag :username
+      .control-group
+        .control-label= label_tag :password, t('password')
+        .controls= password_field_tag :password
+      .control-group
+        .control-label="&nbsp;".html_safe
+        .controls= submit_tag :submit, value: t('login'), class: "btn btn-primary"

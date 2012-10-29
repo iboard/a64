@@ -1,0 +1,8 @@
+- if flash.any?
+  .container-fluid
+    #flashes
+      %button{ type:"button", class:"close", "data-dismiss"=>"alert"}="×&nbsp;".html_safe
+      - flash.each do |key, message|
+        %div{ id: "flash-#{key}", class: "alert #{bootstrap_flash_class(key)}"}
+          %h3=t("flash_" + key.to_s)
+          = simple_format message

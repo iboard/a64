@@ -45,3 +45,17 @@ footer {
     text-shadow: 1px 1px 2 #000;
   }
 }
+
+#flashes {
+  // swallow the bottom-gap from main-menu
+  margin-top: -15px;
+}
+
+.page-title {
+  margin-bottom: 20px;
+}
+
+.sign-in-form {
+  padding-top: 20px;
+  padding-left: 20px;
+}

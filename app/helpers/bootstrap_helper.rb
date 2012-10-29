@@ -51,12 +51,26 @@ module BootstrapHelper
   # @return [String] - the icon-class for twitter bootstrap
   def bootstrap_icon(icon)
     case icon.to_s
+      when 'user'
+        'icon-user'
       when 'home'
         'icon-home'
       when 'setup'
         'icon-cog'
       else
         'icon-certificate'
+    end
+  end
+
+
+  def bootstrap_flash_class(flash_class)
+    case flash_class.to_s
+      when 'alert'
+        'alert-error'
+      when 'notice'
+        'alert-success'
+      else
+        'alert-info'
     end
   end
   # @!endgroup

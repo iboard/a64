@@ -2,4 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  login: "Log in"
+  invalid_login: "Invalid credentials, please try again ..."
+  flash_alert: "Error"
+  successfully_logged_in_as: "Successfully logged in as %{username}"
+  you_are_signed_out: "Goodbye, you are signed out"
+  current_user: "%{username}"
