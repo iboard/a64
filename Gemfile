@@ -38,8 +38,8 @@ gem "bcrypt-ruby"
 gem "mongoid", "~> 3.0.0"
 
 # ENGINES
-#gem "admin", git: "git@github.com:iboard/a64admin.git"
-gem "admin", path: File.expand_path('../../admin',__FILE__)
+gem "admin", git: "git@github.com:iboard/a64admin.git"
+#gem "admin", path: File.expand_path('../../admin',__FILE__)
 
 # TOOLS AND HELPERS
 gem "redcarpet"
